@@ -14,6 +14,24 @@
 		E8891F691B1D76B4002CD42E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8891F681B1D76B4002CD42E /* Images.xcassets */; };
 		E8891F6C1B1D76B4002CD42E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8891F6A1B1D76B4002CD42E /* LaunchScreen.xib */; };
 		E8891F781B1D76B4002CD42E /* CameratKuwaitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E8891F771B1D76B4002CD42E /* CameratKuwaitTests.m */; };
+		E8891F8F1B1D76F9002CD42E /* 40kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F811B1D76F9002CD42E /* 40kmh.gif */; };
+		E8891F901B1D76F9002CD42E /* 50Ampel.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F821B1D76F9002CD42E /* 50Ampel.gif */; };
+		E8891F911B1D76F9002CD42E /* 50kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F831B1D76F9002CD42E /* 50kmh.gif */; };
+		E8891F921B1D76F9002CD42E /* 60Ampel.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F841B1D76F9002CD42E /* 60Ampel.gif */; };
+		E8891F931B1D76F9002CD42E /* 60kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F851B1D76F9002CD42E /* 60kmh.gif */; };
+		E8891F941B1D76F9002CD42E /* 70kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F861B1D76F9002CD42E /* 70kmh.gif */; };
+		E8891F951B1D76F9002CD42E /* 80Ampel.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F871B1D76F9002CD42E /* 80Ampel.gif */; };
+		E8891F961B1D76F9002CD42E /* 80kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F881B1D76F9002CD42E /* 80kmh.gif */; };
+		E8891F971B1D76F9002CD42E /* 90kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F891B1D76F9002CD42E /* 90kmh.gif */; };
+		E8891F981B1D76F9002CD42E /* 100kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F8A1B1D76F9002CD42E /* 100kmh.gif */; };
+		E8891F991B1D76F9002CD42E /* 120kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F8B1B1D76F9002CD42E /* 120kmh.gif */; };
+		E8891F9A1B1D76F9002CD42E /* 130kmh.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F8C1B1D76F9002CD42E /* 130kmh.gif */; };
+		E8891F9B1B1D76F9002CD42E /* Ampel.gif in Resources */ = {isa = PBXBuildFile; fileRef = E8891F8D1B1D76F9002CD42E /* Ampel.gif */; };
+		E8891F9C1B1D76F9002CD42E /* taftesh.png in Resources */ = {isa = PBXBuildFile; fileRef = E8891F8E1B1D76F9002CD42E /* taftesh.png */; };
+		E8891F9F1B1D7713002CD42E /* cameras.json in Resources */ = {isa = PBXBuildFile; fileRef = E8891F9E1B1D7713002CD42E /* cameras.json */; };
+		E8891FA11B1D7950002CD42E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8891FA01B1D7950002CD42E /* CoreLocation.framework */; };
+		E8891FA31B1D79F2002CD42E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8891FA21B1D79F2002CD42E /* MapKit.framework */; };
+		E8891FA61B1D8E4C002CD42E /* MyCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E8891FA51B1D8E4C002CD42E /* MyCustomAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +58,25 @@
 		E8891F711B1D76B4002CD42E /* CameratKuwaitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CameratKuwaitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8891F761B1D76B4002CD42E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8891F771B1D76B4002CD42E /* CameratKuwaitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameratKuwaitTests.m; sourceTree = "<group>"; };
+		E8891F811B1D76F9002CD42E /* 40kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 40kmh.gif; sourceTree = "<group>"; };
+		E8891F821B1D76F9002CD42E /* 50Ampel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 50Ampel.gif; sourceTree = "<group>"; };
+		E8891F831B1D76F9002CD42E /* 50kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 50kmh.gif; sourceTree = "<group>"; };
+		E8891F841B1D76F9002CD42E /* 60Ampel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 60Ampel.gif; sourceTree = "<group>"; };
+		E8891F851B1D76F9002CD42E /* 60kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 60kmh.gif; sourceTree = "<group>"; };
+		E8891F861B1D76F9002CD42E /* 70kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 70kmh.gif; sourceTree = "<group>"; };
+		E8891F871B1D76F9002CD42E /* 80Ampel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 80Ampel.gif; sourceTree = "<group>"; };
+		E8891F881B1D76F9002CD42E /* 80kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 80kmh.gif; sourceTree = "<group>"; };
+		E8891F891B1D76F9002CD42E /* 90kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 90kmh.gif; sourceTree = "<group>"; };
+		E8891F8A1B1D76F9002CD42E /* 100kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 100kmh.gif; sourceTree = "<group>"; };
+		E8891F8B1B1D76F9002CD42E /* 120kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 120kmh.gif; sourceTree = "<group>"; };
+		E8891F8C1B1D76F9002CD42E /* 130kmh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = 130kmh.gif; sourceTree = "<group>"; };
+		E8891F8D1B1D76F9002CD42E /* Ampel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Ampel.gif; sourceTree = "<group>"; };
+		E8891F8E1B1D76F9002CD42E /* taftesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taftesh.png; sourceTree = "<group>"; };
+		E8891F9E1B1D7713002CD42E /* cameras.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cameras.json; sourceTree = "<group>"; };
+		E8891FA01B1D7950002CD42E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E8891FA21B1D79F2002CD42E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E8891FA41B1D8E4C002CD42E /* MyCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomAnnotation.h; sourceTree = "<group>"; };
+		E8891FA51B1D8E4C002CD42E /* MyCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +84,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8891FA31B1D79F2002CD42E /* MapKit.framework in Frameworks */,
+				E8891FA11B1D7950002CD42E /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +102,8 @@
 		E8891F4F1B1D76B4002CD42E = {
 			isa = PBXGroup;
 			children = (
+				E8891FA21B1D79F2002CD42E /* MapKit.framework */,
+				E8891FA01B1D7950002CD42E /* CoreLocation.framework */,
 				E8891F5A1B1D76B4002CD42E /* CameratKuwait */,
 				E8891F741B1D76B4002CD42E /* CameratKuwaitTests */,
 				E8891F591B1D76B4002CD42E /* Products */,
@@ -81,6 +122,7 @@
 		E8891F5A1B1D76B4002CD42E /* CameratKuwait */ = {
 			isa = PBXGroup;
 			children = (
+				E8891F9D1B1D7700002CD42E /* Assets */,
 				E8891F5F1B1D76B4002CD42E /* AppDelegate.h */,
 				E8891F601B1D76B4002CD42E /* AppDelegate.m */,
 				E8891F621B1D76B4002CD42E /* ViewController.h */,
@@ -89,6 +131,8 @@
 				E8891F681B1D76B4002CD42E /* Images.xcassets */,
 				E8891F6A1B1D76B4002CD42E /* LaunchScreen.xib */,
 				E8891F5B1B1D76B4002CD42E /* Supporting Files */,
+				E8891FA41B1D8E4C002CD42E /* MyCustomAnnotation.h */,
+				E8891FA51B1D8E4C002CD42E /* MyCustomAnnotation.m */,
 			);
 			path = CameratKuwait;
 			sourceTree = "<group>";
@@ -117,6 +161,28 @@
 				E8891F761B1D76B4002CD42E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E8891F9D1B1D7700002CD42E /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				E8891F9E1B1D7713002CD42E /* cameras.json */,
+				E8891F811B1D76F9002CD42E /* 40kmh.gif */,
+				E8891F821B1D76F9002CD42E /* 50Ampel.gif */,
+				E8891F831B1D76F9002CD42E /* 50kmh.gif */,
+				E8891F841B1D76F9002CD42E /* 60Ampel.gif */,
+				E8891F851B1D76F9002CD42E /* 60kmh.gif */,
+				E8891F861B1D76F9002CD42E /* 70kmh.gif */,
+				E8891F871B1D76F9002CD42E /* 80Ampel.gif */,
+				E8891F881B1D76F9002CD42E /* 80kmh.gif */,
+				E8891F891B1D76F9002CD42E /* 90kmh.gif */,
+				E8891F8A1B1D76F9002CD42E /* 100kmh.gif */,
+				E8891F8B1B1D76F9002CD42E /* 120kmh.gif */,
+				E8891F8C1B1D76F9002CD42E /* 130kmh.gif */,
+				E8891F8D1B1D76F9002CD42E /* Ampel.gif */,
+				E8891F8E1B1D76F9002CD42E /* taftesh.png */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +266,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8891F671B1D76B4002CD42E /* Main.storyboard in Resources */,
+				E8891F921B1D76F9002CD42E /* 60Ampel.gif in Resources */,
+				E8891F901B1D76F9002CD42E /* 50Ampel.gif in Resources */,
+				E8891F991B1D76F9002CD42E /* 120kmh.gif in Resources */,
+				E8891F9F1B1D7713002CD42E /* cameras.json in Resources */,
+				E8891F931B1D76F9002CD42E /* 60kmh.gif in Resources */,
+				E8891F8F1B1D76F9002CD42E /* 40kmh.gif in Resources */,
+				E8891F941B1D76F9002CD42E /* 70kmh.gif in Resources */,
 				E8891F6C1B1D76B4002CD42E /* LaunchScreen.xib in Resources */,
+				E8891F9A1B1D76F9002CD42E /* 130kmh.gif in Resources */,
+				E8891F911B1D76F9002CD42E /* 50kmh.gif in Resources */,
+				E8891F951B1D76F9002CD42E /* 80Ampel.gif in Resources */,
+				E8891F981B1D76F9002CD42E /* 100kmh.gif in Resources */,
+				E8891F9B1B1D76F9002CD42E /* Ampel.gif in Resources */,
+				E8891F9C1B1D76F9002CD42E /* taftesh.png in Resources */,
+				E8891F961B1D76F9002CD42E /* 80kmh.gif in Resources */,
+				E8891F971B1D76F9002CD42E /* 90kmh.gif in Resources */,
 				E8891F691B1D76B4002CD42E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +303,7 @@
 				E8891F641B1D76B4002CD42E /* ViewController.m in Sources */,
 				E8891F611B1D76B4002CD42E /* AppDelegate.m in Sources */,
 				E8891F5E1B1D76B4002CD42E /* main.m in Sources */,
+				E8891FA61B1D8E4C002CD42E /* MyCustomAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -348,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CameratKuwait/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CameratKuwait/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
