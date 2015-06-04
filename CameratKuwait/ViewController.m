@@ -10,6 +10,12 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MapKit/MapKit.h>
 #import "MyCustomAnnotation.h"
+#import <AVFoundation/AVFoundation.h>
+#import "AudioController.h"
+
+#define RAD_TO_DEG(r) ((r) * (180 / M_PI))
+#define degreesToRadians(x) (M_PI * x / 180.0)
+#define radiandsToDegrees(x) (x * 180.0 / M_PI)
 
 @interface ViewController ()<CLLocationManagerDelegate,MKMapViewDelegate>
 
@@ -17,9 +23,14 @@
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 @property (nonatomic, strong) NSArray* cameras;
+@property (strong, nonatomic) AudioController *audioController;
+
 @end
 
 @implementation ViewController
+{
+    int lastID;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,6 +45,7 @@
     [self.map setShowsUserLocation:YES];
     [self.map setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
     
+    lastID = 0;
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cameras" ofType:@"json"];
     NSError* error2;
@@ -82,10 +94,13 @@
             
             
             annotation = [[MyCustomAnnotation alloc]initWithTitle:title location:location image:[UIImage imageNamed:image]];
-
+            
         }
         [self.map addAnnotation:annotation];
     }
+    
+    
+    self.audioController = [[AudioController alloc] init];
     
     
 }
@@ -104,65 +119,109 @@
     
     
     
-    // Add another annotation to the map.
-    /*MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
-    annotation.coordinate = newLocation.coordinate;
-    [self.map addAnnotation:annotation];
-    
-    // Also add to our map so we can remove old values later
-    self.locations = [[NSMutableArray alloc] init];
-    [self.locations addObject:annotation];
-    
-    // Remove values if the array is too big
-    while (self.locations.count > 100)
+    for(NSDictionary* dict in self.cameras)
     {
-        annotation = [self.locations objectAtIndex:0];
-        [self.locations removeObjectAtIndex:0];
+        CLLocation* cameraLoc = [[CLLocation alloc]initWithLatitude:[[dict objectForKey:@"lat"] floatValue] longitude:[[dict objectForKey:@"lng"] floatValue]];
         
-        // Also remove from the map
-        [self.map removeAnnotation:annotation];
+        CLLocationDistance itemDist = [cameraLoc distanceFromLocation:newLocation];
+        
+        if(itemDist < 500)
+        {
+            if(lastID != [[dict objectForKey:@"id"] intValue])
+            {
+                lastID = [[dict objectForKey:@"id"] intValue];
+                [self.audioController playSystemSound];
+                
+            }
+            break;
+        }
     }
     
+    // heading > 200
+    
+    
+    
+    
+    
+    
+    
+    /*CLLocation* carLoc = [[CLLocation alloc]initWithLatitude:29.376211 longitude:47.985641];
+     CLLocation* cameraLoc = [[CLLocation alloc]initWithLatitude:29.376440 longitude:47.985572];
+     
+     NSLog(@"%f -- %f",[carLoc distanceFromLocation:cameraLoc],[self getHeadingForDirectionFromCoordinate:carLoc.coordinate toCoordinate:cameraLoc.coordinate]);
+     
+     
+     CLLocationCoordinate2D coord1 = newLocation.coordinate;
+     CLLocationCoordinate2D coord2 = oldLocation.coordinate;
+     
+     CLLocationDegrees deltaLong = coord2.longitude - coord1.longitude;
+     CLLocationDegrees yComponent = sin(deltaLong) * cos(coord2.latitude);
+     CLLocationDegrees xComponent = (cos(coord1.latitude) * sin(coord2.latitude)) - (sin(coord1.latitude) * cos(coord2.latitude) * cos(deltaLong));
+     
+     CLLocationDegrees radians = atan2(yComponent, xComponent);
+     CLLocationDegrees degrees = RAD_TO_DEG(radians) + 360;
+     
+     CLLocationDirection heading = fmod(degrees, 360);
+     NSLog(@"loc: %f", heading);*/
+    // Add another annotation to the map.
+    /*MKPointAnnotation *annotation = [[MKPointAnnotation alloc] init];
+     annotation.coordinate = newLocation.coordinate;
+     [self.map addAnnotation:annotation];
+     
+     // Also add to our map so we can remove old values later
+     self.locations = [[NSMutableArray alloc] init];
+     [self.locations addObject:annotation];
+     
+     // Remove values if the array is too big
+     while (self.locations.count > 100)
+     {
+     annotation = [self.locations objectAtIndex:0];
+     [self.locations removeObjectAtIndex:0];
+     
+     // Also remove from the map
+     [self.map removeAnnotation:annotation];
+     }
+     
+     if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive)
+     {
+     // determine the region the points span so we can update our map's zoom.
+     double maxLat = -91;
+     double minLat =  91;
+     double maxLon = -181;
+     double minLon =  181;
+     
+     for (MKPointAnnotation *annotation in self.locations)
+     {
+     CLLocationCoordinate2D coordinate = annotation.coordinate;
+     
+     if (coordinate.latitude > maxLat)
+     maxLat = coordinate.latitude;
+     if (coordinate.latitude < minLat)
+     minLat = coordinate.latitude;
+     
+     if (coordinate.longitude > maxLon)
+     maxLon = coordinate.longitude;
+     if (coordinate.longitude < minLon)
+     minLon = coordinate.longitude;
+     }
+     
+     MKCoordinateRegion region;
+     // region.span.latitudeDelta  = (maxLat +  90) - (minLat +  90);
+     // region.span.longitudeDelta = (maxLon + 180) - (minLon + 180);
+     
+     // the center point is the average of the max and mins
+     region.center.latitude  = minLat + region.span.latitudeDelta / 2;
+     region.center.longitude = minLon + region.span.longitudeDelta / 2;
+     
+     // Set the region of the map.
+     //[self.map setCenterCoordinate:region.center animated:YES];// setRegion:region animated:YES];*/
     if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive)
     {
-        // determine the region the points span so we can update our map's zoom.
-        double maxLat = -91;
-        double minLat =  91;
-        double maxLon = -181;
-        double minLon =  181;
-        
-        for (MKPointAnnotation *annotation in self.locations)
-        {
-            CLLocationCoordinate2D coordinate = annotation.coordinate;
-            
-            if (coordinate.latitude > maxLat)
-                maxLat = coordinate.latitude;
-            if (coordinate.latitude < minLat)
-                minLat = coordinate.latitude;
-            
-            if (coordinate.longitude > maxLon)
-                maxLon = coordinate.longitude;
-            if (coordinate.longitude < minLon)
-                minLon = coordinate.longitude;
-        }
-        
-        MKCoordinateRegion region;
-       // region.span.latitudeDelta  = (maxLat +  90) - (minLat +  90);
-       // region.span.longitudeDelta = (maxLon + 180) - (minLon + 180);
-        
-        // the center point is the average of the max and mins
-        region.center.latitude  = minLat + region.span.latitudeDelta / 2;
-        region.center.longitude = minLon + region.span.longitudeDelta / 2;
-        
-        // Set the region of the map.
-        //[self.map setCenterCoordinate:region.center animated:YES];// setRegion:region animated:YES];*/
-    if (UIApplication.sharedApplication.applicationState == UIApplicationStateActive)
-    {
-        NSLog(@"App is foreground. New location is %@", newLocation);
+        // NSLog(@"App is foreground. New location is %@", newLocation);
     }
     else
     {
-        NSLog(@"App is backgrounded. New location is %@", newLocation);
+        //NSLog(@"App is backgrounded. New location is %@", newLocation);
     }
 }
 
@@ -185,6 +244,23 @@
     }else
     {
         return nil;
+    }
+}
+
+
+- (float)getHeadingForDirectionFromCoordinate:(CLLocationCoordinate2D)fromLoc toCoordinate:(CLLocationCoordinate2D)toLoc
+{
+    float fLat = degreesToRadians(fromLoc.latitude);
+    float fLng = degreesToRadians(fromLoc.longitude);
+    float tLat = degreesToRadians(toLoc.latitude);
+    float tLng = degreesToRadians(toLoc.longitude);
+    
+    float degree = radiandsToDegrees(atan2(sin(tLng-fLng)*cos(tLat), cos(fLat)*sin(tLat)-sin(fLat)*cos(tLat)*cos(tLng-fLng)));
+    
+    if (degree >= 0) {
+        return degree;
+    } else {
+        return 360+degree;
     }
 }
 

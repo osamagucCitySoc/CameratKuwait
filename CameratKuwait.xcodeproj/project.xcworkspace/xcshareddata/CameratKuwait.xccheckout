@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FC8669E3-EDC5-41ED-B8DE-F28CD116CBC0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CameratKuwait</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E1485A699B337EBE6847E0242E491CBBEC9CD48E</key>
+		<string>https://github.com/osamagucCitySoc/CameratKuwait.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CameratKuwait.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E1485A699B337EBE6847E0242E491CBBEC9CD48E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/osamagucCitySoc/CameratKuwait.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E1485A699B337EBE6847E0242E491CBBEC9CD48E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E1485A699B337EBE6847E0242E491CBBEC9CD48E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CameratKuwait</string>
+		</dict>
+	</array>
+</dict>
+</plist>

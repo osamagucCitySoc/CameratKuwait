@@ -32,6 +32,11 @@
 		E8891FA11B1D7950002CD42E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8891FA01B1D7950002CD42E /* CoreLocation.framework */; };
 		E8891FA31B1D79F2002CD42E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8891FA21B1D79F2002CD42E /* MapKit.framework */; };
 		E8891FA61B1D8E4C002CD42E /* MyCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E8891FA51B1D8E4C002CD42E /* MyCustomAnnotation.m */; };
+		E88D12011B2000560001C8D4 /* StatusTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E88D12001B2000560001C8D4 /* StatusTableViewController.m */; };
+		E8CF9FCC1B1E0AB300C02FC8 /* button-3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8CF9FCB1B1E0AB300C02FC8 /* button-3.mp3 */; };
+		E8CF9FCE1B1E0B1800C02FC8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8CF9FCD1B1E0B1800C02FC8 /* AVFoundation.framework */; };
+		E8CF9FD11B1E0C2A00C02FC8 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CF9FD01B1E0C2A00C02FC8 /* AudioController.m */; };
+		E8CF9FD31B1E0D6C00C02FC8 /* button-8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E8CF9FD21B1E0D6C00C02FC8 /* button-8.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,13 @@
 		E8891FA21B1D79F2002CD42E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		E8891FA41B1D8E4C002CD42E /* MyCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomAnnotation.h; sourceTree = "<group>"; };
 		E8891FA51B1D8E4C002CD42E /* MyCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomAnnotation.m; sourceTree = "<group>"; };
+		E88D11FF1B2000560001C8D4 /* StatusTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusTableViewController.h; sourceTree = "<group>"; };
+		E88D12001B2000560001C8D4 /* StatusTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusTableViewController.m; sourceTree = "<group>"; };
+		E8CF9FCB1B1E0AB300C02FC8 /* button-3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "button-3.mp3"; sourceTree = "<group>"; };
+		E8CF9FCD1B1E0B1800C02FC8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E8CF9FCF1B1E0C2A00C02FC8 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		E8CF9FD01B1E0C2A00C02FC8 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		E8CF9FD21B1E0D6C00C02FC8 /* button-8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "button-8.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CF9FCE1B1E0B1800C02FC8 /* AVFoundation.framework in Frameworks */,
 				E8891FA31B1D79F2002CD42E /* MapKit.framework in Frameworks */,
 				E8891FA11B1D7950002CD42E /* CoreLocation.framework in Frameworks */,
 			);
@@ -102,6 +115,7 @@
 		E8891F4F1B1D76B4002CD42E = {
 			isa = PBXGroup;
 			children = (
+				E8CF9FCD1B1E0B1800C02FC8 /* AVFoundation.framework */,
 				E8891FA21B1D79F2002CD42E /* MapKit.framework */,
 				E8891FA01B1D7950002CD42E /* CoreLocation.framework */,
 				E8891F5A1B1D76B4002CD42E /* CameratKuwait */,
@@ -124,6 +138,8 @@
 			children = (
 				E8891F9D1B1D7700002CD42E /* Assets */,
 				E8891F5F1B1D76B4002CD42E /* AppDelegate.h */,
+				E8CF9FCF1B1E0C2A00C02FC8 /* AudioController.h */,
+				E8CF9FD01B1E0C2A00C02FC8 /* AudioController.m */,
 				E8891F601B1D76B4002CD42E /* AppDelegate.m */,
 				E8891F621B1D76B4002CD42E /* ViewController.h */,
 				E8891F631B1D76B4002CD42E /* ViewController.m */,
@@ -133,6 +149,8 @@
 				E8891F5B1B1D76B4002CD42E /* Supporting Files */,
 				E8891FA41B1D8E4C002CD42E /* MyCustomAnnotation.h */,
 				E8891FA51B1D8E4C002CD42E /* MyCustomAnnotation.m */,
+				E88D11FF1B2000560001C8D4 /* StatusTableViewController.h */,
+				E88D12001B2000560001C8D4 /* StatusTableViewController.m */,
 			);
 			path = CameratKuwait;
 			sourceTree = "<group>";
@@ -166,6 +184,8 @@
 		E8891F9D1B1D7700002CD42E /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E8CF9FD21B1E0D6C00C02FC8 /* button-8.mp3 */,
+				E8CF9FCB1B1E0AB300C02FC8 /* button-3.mp3 */,
 				E8891F9E1B1D7713002CD42E /* cameras.json */,
 				E8891F811B1D76F9002CD42E /* 40kmh.gif */,
 				E8891F821B1D76F9002CD42E /* 50Ampel.gif */,
@@ -277,8 +297,10 @@
 				E8891F9A1B1D76F9002CD42E /* 130kmh.gif in Resources */,
 				E8891F911B1D76F9002CD42E /* 50kmh.gif in Resources */,
 				E8891F951B1D76F9002CD42E /* 80Ampel.gif in Resources */,
+				E8CF9FCC1B1E0AB300C02FC8 /* button-3.mp3 in Resources */,
 				E8891F981B1D76F9002CD42E /* 100kmh.gif in Resources */,
 				E8891F9B1B1D76F9002CD42E /* Ampel.gif in Resources */,
+				E8CF9FD31B1E0D6C00C02FC8 /* button-8.mp3 in Resources */,
 				E8891F9C1B1D76F9002CD42E /* taftesh.png in Resources */,
 				E8891F961B1D76F9002CD42E /* 80kmh.gif in Resources */,
 				E8891F971B1D76F9002CD42E /* 90kmh.gif in Resources */,
@@ -300,10 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8CF9FD11B1E0C2A00C02FC8 /* AudioController.m in Sources */,
 				E8891F641B1D76B4002CD42E /* ViewController.m in Sources */,
 				E8891F611B1D76B4002CD42E /* AppDelegate.m in Sources */,
 				E8891F5E1B1D76B4002CD42E /* main.m in Sources */,
 				E8891FA61B1D8E4C002CD42E /* MyCustomAnnotation.m in Sources */,
+				E88D12011B2000560001C8D4 /* StatusTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,6 +524,7 @@
 				E8891F7D1B1D76B4002CD42E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E8891F7E1B1D76B4002CD42E /* Build configuration list for PBXNativeTarget "CameratKuwaitTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +533,7 @@
 				E8891F801B1D76B4002CD42E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
