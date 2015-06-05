@@ -34,6 +34,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isAbout"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    [self.tabBarController.tabBar setTintColor:[UIColor colorWithRed:74.0/255 green:166.0/255 blue:230.0/255 alpha:1.0]];
+    
     self.locations = [[NSMutableArray alloc] init];
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation;
@@ -103,6 +109,34 @@
     self.audioController = [[AudioController alloc] init];
     
     
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"isAbout"])
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"isAbout"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        [self showTabBar:self.tabBarController];
+    }
+}
+
+- (void)showTabBar:(UITabBarController *)tabbarcontroller
+{
+    tabbarcontroller.tabBar.hidden = NO;
+    [UIView animateWithDuration:0.3 animations:^{
+        for (UIView *view in tabbarcontroller.view.subviews) {
+            if ([view isKindOfClass:[UITabBar class]]) {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y-49.f, view.frame.size.width, view.frame.size.height)];
+            }
+            else {
+                [view setFrame:CGRectMake(view.frame.origin.x, view.frame.origin.y, view.frame.size.width, view.frame.size.height-49.f)];
+            }
+        }
+    } completion:^(BOOL finished) {
+        //do smth after animation finishes
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

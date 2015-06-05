@@ -32,6 +32,10 @@
 
 }
 
+- (IBAction)addNew:(id)sender {
+    NSLog(@"Do something..");
+}
+
 -(void)getLatestStatuses
 {
     
@@ -82,14 +86,14 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
+    if (dataSource.count <= indexPath.row)return cell;
     
+    NSDictionary *dict = [[NSDictionary alloc] init];
+    dict = [dataSource mutableCopy];
     
-    NSDictionary* dict = [dataSource objectAtIndex:indexPath.row];
-    
-    [(UILabel*)[cell viewWithTag:1] setText:[dict objectForKey:@"street"]];
-    [(UILabel*)[cell viewWithTag:2] setText:[dict objectForKey:@"status"]];
+    [(UILabel*)[cell viewWithTag:1] setText:[@"الشارع: " stringByAppendingString:[[dict objectForKey:@"0"] objectForKey:@"street"]]];
+    [(UILabel*)[cell viewWithTag:2] setText:[@"الحالة: " stringByAppendingString:[[dict objectForKey:@"0"] objectForKey:@"status"]]];
     [(UILabel*)[cell viewWithTag:3] setText:[dict objectForKey:@"clock"]];
-    
     
     return cell;
 }
